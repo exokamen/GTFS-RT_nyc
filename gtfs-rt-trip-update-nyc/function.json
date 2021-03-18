@@ -1,0 +1,18 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "mytimer",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "0 */20 * * * *"
+    },
+    {
+      "type": "blob",
+      "direction": "out",
+      "name": "outputblob",
+      "path": "gtfs-rt/gtfs-rt-trip-updates-record_nyc_{datetime:yyy-MM-dd-hh-mm-ss}.csv",
+      "connection": "AzureWebJobsStorage"
+    }
+  ]
+}

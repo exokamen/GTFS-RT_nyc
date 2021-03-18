@@ -1,0 +1,18 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "dailyTimer",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "0 23 4,10,16,22 * * *"
+    },
+    {
+      "type": "blob",
+      "direction": "out",
+      "name": "outbputblob",
+      "path": "gtfs-rt-daily-collections/gtfs-rt-trip-updates-collected_nyc_{datetime:yyy-MM-dd-hh:mm}.csv",
+      "connection": "AzureWebJobsStorage"
+    }
+  ]
+}
